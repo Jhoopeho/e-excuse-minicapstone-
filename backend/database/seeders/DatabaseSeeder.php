@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
 
         // ---- Students ----
         $students = collect([
-            ['15749', 'Hope John Bgaipo'],  // demo student account
+            ['15749', 'Hope John Bagaipo'],  // demo student account
             ['15750', 'Mike Palapar'],
             ['15751', 'Clarke Murcia'],
             ['15752', 'Kindred Notarte'],
