@@ -78,6 +78,8 @@ The seeder creates four teacher accounts, ten student accounts, six categories, 
 |---|---|---|---|
 | Teacher | `T-1001` | `password` | Jhon lyod Catalan |
 | Teacher | `T-1002` | `password` | Ricardo JR Rosco |
+| Teacher | `T-1003` | `password` | Sheryl Enriquez |
+| Teacher | `T-1004` | `password` | Christine May Jabal |
 | Student | `15749` | `15749` | Hope John Bagaipo |
 | Student | `15750` | `15750` | Mike Palapar |
 
