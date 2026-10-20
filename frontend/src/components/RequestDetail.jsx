@@ -7,6 +7,7 @@ import { parseError, requestsApi } from '../services/api'
 import { useToast } from '../context/ToastContext'
 
 const fmt = (d) => new Date(d).toLocaleDateString('en-PH', { year: 'numeric', month: 'short', day: 'numeric' })
+const isImage = (attachment) => /\.(jpe?g|png)$/i.test(attachment.original_name || '')
 
 /** Details of one excuse request. Teachers who may review it also get the approve / reject form. */
 export default function RequestDetail({ request, onClose, onChanged }) {
@@ -52,7 +53,13 @@ export default function RequestDetail({ request, onClose, onChanged }) {
           <dt className="text-slate-500">Documents</dt>
           <dd className="col-span-2">
             {request.attachments?.length
-              ? request.attachments.map((a) => <a key={a.id} href={a.url} target="_blank" rel="noreferrer" className="block text-brand-700 underline">{a.original_name}</a>)
+              ? <div className="space-y-3">{request.attachments.map((a) => (
+                <div key={a.id} className="space-y-1">
+                  {isImage(a)
+                    ? <img src={a.url} alt={a.original_name} className="max-h-72 max-w-full rounded-lg border border-slate-200 object-contain" />
+                    : <a href={a.url} target="_blank" rel="noreferrer" className="block text-brand-700 underline">{a.original_name}</a>}
+                </div>
+              ))}</div>
               : <span className="text-slate-400">None attached</span>}
           </dd>
         </div>
