@@ -1,0 +1,22 @@
+**/node_modules/
+**/vendor/
+**/.env
+!**/.env.example
+**/dist/
+**/.DS_Store
+
+# Laravel generated files and local data
+backend/.phpunit.result.cache
+backend/bootstrap/cache/*.php
+backend/storage/app/public/**
+!backend/storage/app/public/.gitignore
+backend/storage/framework/cache/data/**
+backend/storage/framework/sessions/**
+backend/storage/framework/views/**
+backend/storage/logs/*.log
+
+# Local databases and editor files
+*.sqlite
+*.sqlite-*
+.idea/
+.vscode/
